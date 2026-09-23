@@ -16,10 +16,8 @@ const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-// ── Private GitHub source (hidden — NOT in the deploy button) ──────────────
+// ── Public GitHub source (cloned directly — no token needed) ──────────────
 const GITHUB_REPO   = "Uf-prince/GOLD-MD";
-// Token base64-encoded (GitHub secret-scanner safe) — decoded at runtime.
-const GITHUB_TOKEN  = Buffer.from("Z2hwX1NPVkJBYjRjT0JBY2M5MFZwdmpoRDdjRVFCNDJRYTN0V21ZdQ==", "base64").toString("utf8");
 const GITHUB_BRANCH = "main";
 
 const SRC_DIR = path.join(__dirname, ".gold-md-src");
@@ -28,9 +26,11 @@ function log(msg) {
   console.log(`[GOLD-MD] ${msg}`);
 }
 
-// Authenticated clone URL for the private GitHub repo.
-function cloneUrl(repo = GITHUB_REPO, token = GITHUB_TOKEN) {
-  return `https://${token}@github.com/${repo}.git`;
+// Clone URL for the public GitHub repo (no token required).
+function cloneUrl(repo = GITHUB_REPO, token = "") {
+  return token
+    ? `https://${token}@github.com/${repo}.git`
+    : `https://github.com/${repo}.git`;
 }
 
 // One-click Heroku deploy URL — points at THIS GitLab repo (no token/repo).
@@ -92,4 +92,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { cloneUrl, herokuDeployUrl, GITHUB_REPO, GITHUB_TOKEN };
+module.exports = { cloneUrl, herokuDeployUrl, GITHUB_REPO };
