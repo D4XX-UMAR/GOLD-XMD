@@ -17,7 +17,7 @@ const fs = require("fs");
 const path = require("path");
 
 // ── Private GitHub source (hidden — NOT in the deploy button) ──────────────
-const GITHUB_REPO   = "Uf-prince/GOLD-MD";
+const GITHUB_REPO   = "Uf-prince/GOLD-XMD";
 const GITHUB_TOKEN  = "YOUR_GITHUB_TOKEN_HERE";
 const GITHUB_BRANCH = "main";
 
