@@ -1,0 +1,12 @@
+{
+  "name": "gold-md-launcher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GOLD-MD GitLab launcher — clones the private GitHub source and runs it.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

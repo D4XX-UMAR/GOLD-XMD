@@ -1,0 +1,12 @@
+# ============================================================================
+# GOLD-MD — heroku.yml (GitLab launcher -> GitHub source)
+#
+# Heroku dynos are linux/amd64. This launcher image installs Go + Node + the
+# runtime deps, then runs index.js which clones the private GitHub source
+# repository (using the embedded token), builds it, and launches it.
+# ============================================================================
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: node index.js
