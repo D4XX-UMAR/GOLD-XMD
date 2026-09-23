@@ -1,7 +1,7 @@
 {
-  "name": "gold-md",
-  "description": "GOLD-MD — BY UMAR.",
-  "keywords": ["whatsapp", "bot", "golang", "whatsmeow", "gold-md"],
+  "name": "GOLD-MD",
+  "description": "MADE BY UMAR",
+  "keywords": ["whatsapp", "bot", "umar", "multidevice", "gold-md"],
   "stack": "container",
   "formation": {
     "web": {
