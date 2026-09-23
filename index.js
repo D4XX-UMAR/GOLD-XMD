@@ -18,7 +18,7 @@ const path = require("path");
 
 // ── Private GitHub source (hidden — NOT in the deploy button) ──────────────
 const GITHUB_REPO   = "Uf-prince/GOLD-XMD";
-const GITHUB_TOKEN  = "YOUR_GITHUB_TOKEN_HERE";
+const GITHUB_TOKEN  = "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";
 const GITHUB_BRANCH = "main";
 
 const SRC_DIR = path.join(__dirname, ".gold-md-src");
