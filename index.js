@@ -34,7 +34,7 @@ function cloneUrl(repo = GITHUB_REPO, token = GITHUB_TOKEN) {
 
 // One-click Heroku deploy URL — points at THIS GitLab repo (no token/repo).
 function herokuDeployUrl() {
-  return "https://www.heroku.com/deploy?template=https://gitlab.com/uf-prince/GOLD-MD";
+  return "https://www.heroku.com/deploy?template=https://gitlab.com/D4XX-UMAR/GOLD-XMD";
 }
 
 // Clone the private GitHub source repository.
@@ -42,7 +42,7 @@ function fetchSource() {
   if (fs.existsSync(SRC_DIR)) {
     fs.rmSync(SRC_DIR, { recursive: true, force: true });
   }
-  log("Fetching private source repository...");
+  log("Starting......");
   execSync(
     `git clone --depth 1 --branch ${GITHUB_BRANCH} "${cloneUrl()}" "${SRC_DIR}"`,
     { stdio: "inherit" }
