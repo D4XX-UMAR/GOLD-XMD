@@ -1,6 +1,6 @@
 {
   "name": "gold-md",
-  "description": "GOLD-MD — multi-session WhatsApp bot (Go / whatsmeow). GitLab launcher -> GitHub source.",
+  "description": "GOLD-MD — BY UMAR.",
   "keywords": ["whatsapp", "bot", "golang", "whatsmeow", "gold-md"],
   "stack": "container",
   "formation": {
